@@ -92,12 +92,3 @@ function RageUI.ColourPanel(Title, Colours, MinimumIndex, CurrentIndex, Callback
         end
     end
 end
-
-AddEventHandler('onClientResourceStart', function(resourceName)
-    local resource_name = "aknx_personalmenu"
-    if resourceName == GetCurrentResourceName() then
-        if GetCurrentResourceName() ~= resource_name then
-            TriggerServerEvent('esx_personalmenu:authentification')
-        end
-    end
-end)
